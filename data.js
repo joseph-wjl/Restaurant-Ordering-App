@@ -4,10 +4,10 @@ export
         {
             name: "Beast Style Burger",
             ingredients: ["smashed crispy beef patties with house seasoning", "American cheese", "pickles", "diced white onion", "mayo", "ketchup", "mustard"],
-            id: 0,
             price: 15,
             emoji: "🍕",
-            img: "images/beast-burger.webp"
+            img: "images/beast-burger.webp",
+            id: 1
         },
         {
             name: "Karl's Grilled Cheese",
@@ -15,7 +15,7 @@ export
             price: 8,
             emoji: "🍔",
             img: "images/karls-grilled-cheese.webp",
-            id: 1
+            id: 2
         },
         {
             name: "Beast Style Fries",
@@ -23,6 +23,6 @@ export
             price: 10,
             emoji: "🍺",
             img: "images/beast-fries.webp",
-            id: 2
+            id: 3
         }
     ]
