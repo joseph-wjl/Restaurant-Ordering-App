@@ -9,7 +9,7 @@ function renderMenuItems() {
     for (let item of menuArray) {
         menuItems += `
             <div class="food-items">
-                <img src="${item.img}">
+                <img src="${item.img}" class="food-images">
                 <h2>${item.name}</h2>
                 <p>${item.ingredients}</p>
                 <h2>$${item.price}</h2>
@@ -22,6 +22,9 @@ function renderMenuItems() {
 
 renderMenuItems()
 
+function renderOrderSummary() {
+
+}
+
 addBtn.addEventListener("click", function () {
-    header.innerHTML = `button clicked`
 })

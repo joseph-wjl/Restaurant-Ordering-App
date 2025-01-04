@@ -1,11 +1,14 @@
-/* body {
-    font-family: ;
-} */
+body {
+    font-family: "bebas neue", serif;
+}
 
-/* Menu container */
+/* Header */
+
+/* Menu*/
 
 .food-images {
-    width: 50px;
+    width: 100px;
+    border-radius: 10px;
 }
 
 .food-items {
@@ -23,3 +26,7 @@
 .add-btn:hover {
     cursor: pointer;
 }
+
+/* Order summary */
+
+/* Modal */
