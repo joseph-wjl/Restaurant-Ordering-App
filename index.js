@@ -23,11 +23,16 @@ function renderMenuItems() {
 
 renderMenuItems()
 
-addBtn.addEventListener("click", function () {
+function getMatchingItem() {
+
+}
+
+addBtn.addEventListener("click", function (e) {
+    console.log(e.target.id)
 })
 
 function addToOrder() {
-
+    let orderedItemsArray = []
 }
 
 function renderOrderSummary() {
