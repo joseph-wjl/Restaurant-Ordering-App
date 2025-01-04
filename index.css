@@ -1,0 +1,8 @@
+.food-images {
+    width: 50px;
+}
+
+.food-items {
+    /* display: flex; */
+    border: 1px black solid;
+}
