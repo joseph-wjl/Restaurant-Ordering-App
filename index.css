@@ -1,3 +1,9 @@
+/* body {
+    font-family: ;
+} */
+
+/* Menu container */
+
 .food-images {
     width: 50px;
 }
@@ -5,4 +11,11 @@
 .food-items {
     /* display: flex; */
     border: 1px black solid;
+}
+
+.add-button {
+    border-radius: 50%;
+    border: grey 1px solid;
+    background-color: whitesmoke;
+    padding: 10px 10px;
 }
