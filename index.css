@@ -25,6 +25,11 @@ body {
 
 .add-btn:hover {
     cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.add-btn:active {
+    background-color: lightgray;
 }
 
 /* Order summary */
@@ -47,6 +52,11 @@ body {
 
 #order-btn:hover {
     cursor: pointer;
+    background-color: #17c98d;
+}
+
+#order-btn:active {
+    background-color: #13ab78;
 }
 
 /* Modal */

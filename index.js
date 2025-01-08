@@ -13,7 +13,7 @@ function renderMenuItems() {
                 <h2>${item.name}</h2>
                 <p>${item.ingredients}</p>
                 <h2>$${item.price}</h2>
-                <button class="add-btn" id="add-btn" data-id="${item.price}">+</button>
+                <button class="add-btn" data-id="${item.price}">+</button>
             </div>
         `
     }
@@ -30,7 +30,6 @@ function addEventListenerToButtons() {
             const selectedFood = e.target.getAttribute('data-id')
             let orderedItemsArray = []
             orderedItemsArray.push(selectedFood)
-            console.log(orderedItemsArray)
             renderOrderSummary()
         })
     })
@@ -39,13 +38,13 @@ function addEventListenerToButtons() {
 function renderOrderSummary() {
     let summary = ``
     summary += `
-        <div class>
-            <h2 id="your-order">Your order</h2>
-            <h2></h2>
-            <h2>Total price: </h2>
-            <button id="order-btn">Complete order</button>
-        </div>
-    `
+            <div class>
+                <h2 id="your-order">Your order</h2>
+                <span>${menuArray.name}</span><span>${menuArray.price}</span>
+                <h2>Total price: </h2>
+                <button id="order-btn">Complete order</button>
+            </div>
+        `
     orderSummary.innerHTML = summary
 }
 
