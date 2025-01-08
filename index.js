@@ -28,11 +28,23 @@ function addEventListenerToButtons() {
     addBtn.forEach(button => {
         button.addEventListener("click", function (e) {
             console.log(e.target.getAttribute('data-id'))
+            renderOrderSummary()
         })
     })
 }
 
-
+function renderOrderSummary() {
+    let summary = ``
+    summary += `
+        <div class>
+            <h2>Your order</h2>
+            <h2></h2>
+            <h2>Total price: </h2>
+            <button id="order-btn">Complete order</button>
+        </div>
+    `
+    orderSummary.innerHTML = summary
+}
 
 // function getMatchingItem() {
 
@@ -42,15 +54,3 @@ function addEventListenerToButtons() {
 //     let orderedItemsArray = []
 // }
 
-// function renderOrderSummary() {
-//     let summary = ``
-//     summary += `
-//         <div class>
-//             <h2>Your order</h2>
-//             <h2></h2>
-//             <h2>Total price: </h2>
-//             <button id="order-btn">Complete order</button>
-//         </div>
-//     `
-//     orderSummary.innerHTML = summary
-// }
