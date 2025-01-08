@@ -3,6 +3,7 @@ import { menuArray } from "./data.js"
 const header = document.getElementById("header")
 const foodList = document.getElementById("food-list")
 const orderSummary = document.getElementById("order-summary")
+const modal = document.querySelector(".modal")
 let orderedItemsArray = []
 
 function renderMenuItems() {
@@ -55,8 +56,15 @@ function renderOrderSummary() {
         <button id="order-btn">Complete order</button>
     `
     orderSummary.innerHTML = summary
+    renderModal()
 }
 
 function renderModal() {
-
+    const orderBtn = document.getElementById("order-btn")
+    orderBtn.addEventListener("click", function () {
+        console.log("ordered")
+        modal.innerHTML = `
+            <h1>Enter card details</h1>
+        `
+    })
 }
