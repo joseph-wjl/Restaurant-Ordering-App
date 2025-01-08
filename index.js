@@ -26,7 +26,7 @@ renderMenuItems()
 function addEventListenerToButtons() {
     const addBtn = document.getElementById("add-btn")
     addBtn.addEventListener("click", function (e) {
-        console.log(e.target.id)
+        console.log(e.target.getAttribute('data-id'))
     })
 }
 
@@ -52,4 +52,3 @@ function addEventListenerToButtons() {
 //     `
 //     orderSummary.innerHTML = summary
 // }
-
