@@ -27,7 +27,10 @@ function addEventListenerToButtons() {
     const addBtn = document.querySelectorAll(".add-btn")
     addBtn.forEach(button => {
         button.addEventListener("click", function (e) {
-            console.log(e.target.getAttribute('data-id'))
+            const selectedFood = e.target.getAttribute('data-id')
+            let orderedItemsArray = []
+            orderedItemsArray.push(selectedFood)
+            console.log(orderedItemsArray)
             renderOrderSummary()
         })
     })
@@ -46,9 +49,10 @@ function renderOrderSummary() {
     orderSummary.innerHTML = summary
 }
 
-function addToOrder() {
-    let orderedItemsArray = []
-}
+// function addToOrder() {
+//     let orderedItemsArray = []
+
+// }
 
 // function getMatchingItem() {
 
