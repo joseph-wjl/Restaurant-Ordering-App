@@ -64,7 +64,6 @@ function renderModal() {
     const orderBtn = document.getElementById("order-btn")
     orderBtn.addEventListener("click", function () {
         modalInner.innerHTML = `
-            <div class="modal" id="modal">
                 <h1>Enter card details</h1>
                 <form>
                     <input type="text" id="name" class="modal-input" placeholder="Enter your name">
@@ -72,7 +71,6 @@ function renderModal() {
                     <input type="text" id="cvv" class="modal-input" placeholder="Enter CVV">
                 </form>
                 <button id="pay-btn">Pay</button>
-            </div>
         `
         modal.style.display = 'flex'
     })
