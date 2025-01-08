@@ -2,7 +2,6 @@ import { menuArray } from "./data.js"
 
 const header = document.getElementById("header")
 const foodList = document.getElementById("food-list")
-const addBtn = document.getElementById("add-btn")
 const orderSummary = document.getElementById("order-summary")
 
 function renderMenuItems() {
@@ -19,32 +18,38 @@ function renderMenuItems() {
         `
     }
     foodList.innerHTML = menuItems
+    addEventListenerToButtons()
 }
 
 renderMenuItems()
 
-function getMatchingItem() {
-
+function addEventListenerToButtons() {
+    const addBtn = document.getElementById("add-btn")
+    addBtn.addEventListener("click", function (e) {
+        console.log(e.target.id)
+    })
 }
 
-addBtn.addEventListener("click", function (e) {
-    console.log(e.target.id)
-})
 
-function addToOrder() {
-    let orderedItemsArray = []
-}
 
-function renderOrderSummary() {
-    let summary = ``
-    summary += `
-        <div class>
-            <h2>Your order</h2>
-            <h2></h2>
-            <h2>Total price: </h2>
-            <button id="order-btn">Complete order</button>
-        </div>
-    `
-    orderSummary.innerHTML = summary
-}
+// function getMatchingItem() {
+
+// }
+
+// function addToOrder() {
+//     let orderedItemsArray = []
+// }
+
+// function renderOrderSummary() {
+//     let summary = ``
+//     summary += `
+//         <div class>
+//             <h2>Your order</h2>
+//             <h2></h2>
+//             <h2>Total price: </h2>
+//             <button id="order-btn">Complete order</button>
+//         </div>
+//     `
+//     orderSummary.innerHTML = summary
+// }
 
