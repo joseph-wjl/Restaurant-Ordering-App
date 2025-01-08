@@ -46,11 +46,10 @@ function renderOrderSummary() {
     orderSummary.innerHTML = summary
 }
 
+function addToOrder() {
+    let orderedItemsArray = []
+}
+
 // function getMatchingItem() {
 
 // }
-
-// function addToOrder() {
-//     let orderedItemsArray = []
-// }
-
