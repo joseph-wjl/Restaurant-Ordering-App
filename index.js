@@ -3,7 +3,8 @@ import { menuArray } from "./data.js"
 const header = document.getElementById("header")
 const foodList = document.getElementById("food-list")
 const orderSummary = document.getElementById("order-summary")
-const modal = document.querySelector(".modal")
+const modal = document.getElementById("modal")
+const modalInner = document.getElementById("modal-inner")
 let orderedItemsArray = []
 
 function renderMenuItems() {
@@ -62,14 +63,17 @@ function renderOrderSummary() {
 function renderModal() {
     const orderBtn = document.getElementById("order-btn")
     orderBtn.addEventListener("click", function () {
-        modal.innerHTML = `
-            <h1>Enter card details</h1>
-            <form>
+        modalInner.innerHTML = `
+            <div class="modal" id="modal">
+                <h1>Enter card details</h1>
+                <form>
                     <input type="text" id="name" class="modal-input" placeholder="Enter your name">
                     <input type="text" id="card" class="modal-input" placeholder="Enter card number">
                     <input type="text" id="cvv" class="modal-input" placeholder="Enter CVV">
-            </form>
-            <button id="pay-btn">Pay</button>
+                </form>
+                <button id="pay-btn">Pay</button>
+            </div>
         `
+        modal.style.display = 'flex'
     })
 }
