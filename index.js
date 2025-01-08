@@ -62,9 +62,14 @@ function renderOrderSummary() {
 function renderModal() {
     const orderBtn = document.getElementById("order-btn")
     orderBtn.addEventListener("click", function () {
-        console.log("ordered")
         modal.innerHTML = `
             <h1>Enter card details</h1>
+            <form>
+                    <input type="text" id="name" class="modal-input" placeholder="Enter your name">
+                    <input type="text" id="card" class="modal-input" placeholder="Enter card number">
+                    <input type="text" id="cvv" class="modal-input" placeholder="Enter CVV">
+            </form>
+            <button id="pay-btn">Pay</button>
         `
     })
 }

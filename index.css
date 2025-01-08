@@ -38,7 +38,8 @@ body {
     text-align: center;
 }
 
-#order-btn {
+#order-btn,
+#pay-btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     background-color: #16DB99;
@@ -50,13 +51,31 @@ body {
     border-radius: 3px;
 }
 
-#order-btn:hover {
+#order-btn:hover,
+#pay-btn:hover {
     cursor: pointer;
     background-color: #17c98d;
 }
 
-#order-btn:active {
+#order-btn:active,
+#pay-btn:active {
     background-color: #13ab78;
 }
 
 /* Modal */
+.modal {
+    width: 520px;
+    height: 540px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.modal-input {
+    width: 80%;
+    padding: 10px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
