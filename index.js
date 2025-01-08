@@ -13,7 +13,7 @@ function renderMenuItems() {
                 <h2>${item.name}</h2>
                 <p>${item.ingredients}</p>
                 <h2>$${item.price}</h2>
-                <button class="add-btn" id="add-btn" data-id="${item.id}">+</button>
+                <button class="add-btn" id="add-btn" data-id="${item.price}">+</button>
             </div>
         `
     }
@@ -24,9 +24,11 @@ function renderMenuItems() {
 renderMenuItems()
 
 function addEventListenerToButtons() {
-    const addBtn = document.getElementById("add-btn")
-    addBtn.addEventListener("click", function (e) {
-        console.log(e.target.getAttribute('data-id'))
+    const addBtn = document.querySelectorAll(".add-btn")
+    addBtn.forEach(button => {
+        button.addEventListener("click", function (e) {
+            console.log(e.target.getAttribute('data-id'))
+        })
     })
 }
 
