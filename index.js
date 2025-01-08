@@ -3,6 +3,7 @@ import { menuArray } from "./data.js"
 const header = document.getElementById("header")
 const foodList = document.getElementById("food-list")
 const orderSummary = document.getElementById("order-summary")
+let orderedItemsArray = []
 
 function renderMenuItems() {
     let menuItems = ``
@@ -27,20 +28,28 @@ function addEventListenerToButtons() {
     const addBtn = document.querySelectorAll(".add-btn")
     addBtn.forEach(button => {
         button.addEventListener("click", function (e) {
-            const selectedFood = e.target.getAttribute('data-id')
-            let orderedItemsArray = []
-            orderedItemsArray.push(selectedFood)
-            renderOrderSummary()
+            const itemId = e.target.getAttribute('data-id')
+            const selectedFood = menuArray.find(item => item.id = itemId)
+            if (selectedFood) {
+                orderedItemsArray.push(selectedFood)
+                console.log(selectedFood)
+                renderOrderSummary()
+            }
         })
     })
 }
 
 function renderOrderSummary() {
-    let summary = ``
+    let summary = `<h2 id="your-order">Your order</h2>`
+    orderedItemsArray.forEach(function (item) {
+        `<div>
+            <span>${item.name}</span><span>${item.price}</span>
+        </div>`
+    })
     summary += `
             <div class>
-                <h2 id="your-order">Your order</h2>
-                <span>${menuArray.name}</span><span>${menuArray.price}</span>
+                
+                
                 <h2>Total price: </h2>
                 <button id="order-btn">Complete order</button>
             </div>
