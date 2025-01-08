@@ -46,22 +46,12 @@ function renderOrderSummary() {
             <span>${item.name}</span><span>${item.price}</span>
         </div>`
     })
+    const totalPrice = menuArray.reduce(function (total, currentItem) {
+        return total + currentItem.price
+    }, 0)
     summary += `
-            <div class>
-                
-                
-                <h2>Total price: </h2>
-                <button id="order-btn">Complete order</button>
-            </div>
-        `
+        <h2>Total price: ${totalPrice}</h2>
+        <button id="order-btn">Complete order</button>
+    `
     orderSummary.innerHTML = summary
 }
-
-// function addToOrder() {
-//     let orderedItemsArray = []
-
-// }
-
-// function getMatchingItem() {
-
-// }
