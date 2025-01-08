@@ -14,7 +14,7 @@ function renderMenuItems() {
                 <h2>${item.name}</h2>
                 <p>${item.ingredients}</p>
                 <h2>$${item.price}</h2>
-                <button class="add-btn" data-id="${item.price}">+</button>
+                <button class="add-btn" data-id="${item.id}">+</button>
             </div>
         `
     }
@@ -29,10 +29,11 @@ function addEventListenerToButtons() {
     addBtn.forEach(button => {
         button.addEventListener("click", function (e) {
             const itemId = e.target.getAttribute('data-id')
-            const selectedFood = menuArray.find(item => item.id = itemId)
+            const selectedFood = menuArray.find(function (item) {
+                return item.id == itemId
+            })
             if (selectedFood) {
                 orderedItemsArray.push(selectedFood)
-                console.log(selectedFood)
                 renderOrderSummary()
             }
         })
@@ -42,16 +43,20 @@ function addEventListenerToButtons() {
 function renderOrderSummary() {
     let summary = `<h2 id="your-order">Your order</h2>`
     orderedItemsArray.forEach(function (item) {
-        `<div>
-            <span>${item.name}</span><span>${item.price}</span>
-        </div>`
+        summary += `<div>
+                    <span>${item.name}</span><span>$${item.price}</span>
+                    </div>`
     })
-    const totalPrice = menuArray.reduce(function (total, currentItem) {
+    const totalPrice = orderedItemsArray.reduce(function (total, currentItem) {
         return total + currentItem.price
     }, 0)
     summary += `
-        <h2>Total price: ${totalPrice}</h2>
+        <h2>Total price: $${totalPrice}</h2>
         <button id="order-btn">Complete order</button>
     `
     orderSummary.innerHTML = summary
+}
+
+function renderModal() {
+
 }
