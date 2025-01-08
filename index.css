@@ -29,4 +29,24 @@ body {
 
 /* Order summary */
 
+#your-order {
+    text-align: center;
+}
+
+#order-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: #16DB99;
+    color: white;
+    border: none;
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 3px;
+}
+
+#order-btn:hover {
+    cursor: pointer;
+}
+
 /* Modal */
