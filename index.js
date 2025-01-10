@@ -74,5 +74,13 @@ function renderModal() {
                 <button id="pay-btn">Pay</button>
         `
         modal.style.display = 'flex'
+
+    })
+    const closeBtn = document.getElementById("close-btn")
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = none
     })
 }
+
+// console.log(closeBtn)
+
