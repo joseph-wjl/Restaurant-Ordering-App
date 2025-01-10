@@ -61,8 +61,7 @@ function renderOrderSummary() {
 }
 
 function renderModal() {
-    const orderBtn = document.getElementById("order-btn")
-    orderBtn.addEventListener("click", function () {
+    document.getElementById("order-btn").addEventListener("click", function () {
         modalInner.innerHTML = `
                 <button id="close-btn">X</button>
                 <h1>Enter card details</h1>
@@ -74,13 +73,12 @@ function renderModal() {
                 <button id="pay-btn">Pay</button>
         `
         modal.style.display = 'flex'
-
-    })
-    const closeBtn = document.getElementById("close-btn")
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = none
+        document.getElementById("close-btn").addEventListener("click", function () {
+            modal.style.display = 'none'
+        })
+        document.getElementById("pay-btn").addEventListener("click", function () {
+            modal.style.display = 'none'
+            orderSummary.innerHTML = `<h2 id="paid-msg">Thanks! Your order is on its way!</h2>`
+        })
     })
 }
-
-// console.log(closeBtn)
-
