@@ -1,20 +1,31 @@
 /* Header */
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     background-color: #6bdbf4;
-    margin-top: 0px;
-    width: 100%;
+    width: 100vw;
     height: 130px;
 }
 
 #logo {
     height: 130px;
+    margin-left: 50px;
 }
 
 body {
     font-family: "bebas neue", serif;
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
     background-color: #feec94;
 }
 
@@ -86,6 +97,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    display: block;
+}
+
+#order-btn {
+    width: 500px;
 }
 
 #order-btn:hover,
@@ -124,7 +140,7 @@ body {
     display: none;
     position: fixed;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     height: 50%;
     top: 0;
     bottom: 0;
@@ -139,7 +155,7 @@ body {
 }
 
 .modal-input {
-    width: 80%;
+    width: 60%;
     padding: 10px 10px;
     margin: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -147,13 +163,17 @@ body {
 
 #pay-btn {
     margin-top: 30px;
+    margin-bottom: 30px;
+    width: 390px;
 }
 
 #close-btn {
     border: none;
-    background-color: white;
+    background-color: #f8e68b;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    margin-top: 0;
+    top: 10px;
+    right: 10px;
+    position: absolute;
 }
