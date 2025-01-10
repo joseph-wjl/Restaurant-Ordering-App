@@ -46,7 +46,9 @@ function renderOrderSummary() {
     let summary = `<h2 id="your-order">Your order</h2>`
     orderedItemsArray.forEach(function (item) {
         summary += `<div>
-                    <span>${item.name}</span><span>$${item.price}</span>
+                        <span>${item.name}</span>
+                        <span id="remove-btn">remove</span>
+                        <span>$${item.price}</span>
                     </div>`
     })
     const totalPrice = orderedItemsArray.reduce(function (total, currentItem) {

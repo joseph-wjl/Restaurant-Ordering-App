@@ -65,6 +65,19 @@ body {
     background-color: #13ab78;
 }
 
+#remove-btn {
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#paid-msg {
+    color: #065F46;
+    background-color: #ECFDF5;
+    padding: 30px 30px;
+    text-align: center;
+}
+
 /* Modal */
 
 .modal {
@@ -102,7 +115,3 @@ body {
     display: inline-block;
     margin-top: 0;
 }
-
-/* .modal-closed {
-    display: none;
-} */
