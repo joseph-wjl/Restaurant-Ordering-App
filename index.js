@@ -12,12 +12,17 @@ function renderMenuItems() {
     for (let item of menuArray) {
         menuItems += `
             <div class="food-items">
-                <img src="${item.img}" class="food-images">
-                <h2>${item.name}</h2>
-                <p>${item.ingredients}</p>
-                <h2>$${item.price}</h2>
+                <div class="food-all-info">
+                    <img src="${item.img}" class="food-images">
+                    <div class="food-details">
+                            <h2>${item.name}</h2>
+                            <p>${item.ingredients}</p>
+                            <h2>$${item.price}</h2>
+                    </div>
+                </div>
                 <button class="add-btn" data-id="${item.id}">+</button>
             </div>
+            <br>
         `
     }
     foodList.innerHTML = menuItems
@@ -45,9 +50,11 @@ function addEventListenerToButtons() {
 function renderOrderSummary() {
     let summary = `<h2 id="your-order">Your order</h2>`
     orderedItemsArray.forEach(function (item) {
-        summary += `<div>
-                        <span>${item.name}</span>
-                        <span id="remove-btn">remove</span>
+        summary += `<div class="ordered-items">
+                        <div>
+                            <span>${item.name}</span>
+                            <span id="remove-btn">remove</span>
+                        </div>
                         <span>$${item.price}</span>
                     </div>`
     })

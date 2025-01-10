@@ -1,19 +1,37 @@
+/* Header */
+
 body {
     font-family: "bebas neue", serif;
+    width: 60%;
+    margin: auto;
 }
-
-/* Header */
 
 /* Menu*/
 
-.food-images {
-    width: 100px;
-    border-radius: 10px;
+.food-items {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px black solid; */
 }
 
-.food-items {
-    /* display: flex; */
-    border: 1px black solid;
+.food-all-info {
+    display: flex;
+    align-items: center;
+}
+
+.food-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    /* border: 1px black solid; */
+    width: 60%;
+}
+
+.food-images {
+    width: 170px;
+    border-radius: 10px;
 }
 
 .add-btn {
@@ -39,6 +57,7 @@ body {
 
 #your-order {
     text-align: center;
+    text-decoration: underline;
 }
 
 #order-btn,
@@ -48,10 +67,13 @@ body {
     background-color: #16DB99;
     color: white;
     border: none;
-    width: 90%;
+    width: 60%;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 #order-btn:hover,
@@ -68,7 +90,13 @@ body {
 #remove-btn {
     font-size: 10px;
     text-decoration: underline;
+    color: darkred;
     cursor: pointer;
+}
+
+.ordered-items {
+    display: flex;
+    justify-content: space-between;
 }
 
 #paid-msg {
@@ -83,8 +111,9 @@ body {
 .modal {
     display: none;
     position: fixed;
-    width: 85%;
-    height: 70%;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
     top: 0;
     bottom: 0;
     right: 0;
@@ -94,7 +123,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: 1px black solid;
+    box-shadow: grey 5px 5px 5px;
 }
 
 .modal-input {
