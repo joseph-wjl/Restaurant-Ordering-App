@@ -64,6 +64,7 @@ function renderModal() {
     const orderBtn = document.getElementById("order-btn")
     orderBtn.addEventListener("click", function () {
         modalInner.innerHTML = `
+                <button id="close-btn">X</button>
                 <h1>Enter card details</h1>
                 <form>
                     <input type="text" id="name" class="modal-input" placeholder="Enter your name">

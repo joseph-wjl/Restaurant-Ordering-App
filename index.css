@@ -86,3 +86,16 @@ body {
     padding: 10px 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* #modal-inner {
+    border: black 1px solid;
+} */
+
+#close-btn {
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0;
+}
