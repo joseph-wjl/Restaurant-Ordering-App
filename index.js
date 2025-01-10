@@ -59,6 +59,9 @@ function renderOrderSummary() {
         <button id="order-btn">Complete order</button>
     `
     orderSummary.innerHTML = summary
+    document.getElementById("remove-btn").addEventListener("click", function () {
+        orderedItemsArray.pop()
+    })
     renderModal()
 }
 
@@ -69,7 +72,7 @@ function renderModal() {
     document.getElementById("close-btn").addEventListener("click", function () {
         modal.style.display = 'none'
     })
-    document.getElementById("pay-form").addEventListener("submit", function (e) {
+    document.getElementById("pay-btn").addEventListener("click", function (e) {
         e.preventDefault()
         modal.style.display = 'none'
         orderSummary.innerHTML = `
