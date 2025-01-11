@@ -36,6 +36,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: grey 1px solid;
+    padding-bottom: 40px;
     /* border: 1px black solid; */
 }
 
@@ -102,6 +104,8 @@ body {
 
 #order-btn {
     width: 500px;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 #order-btn:hover,
@@ -151,7 +155,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f8e68b;
-    box-shadow: grey 5px 5px 5px;
+    box-shadow: 0 4px 8px 0 #00000033;
 }
 
 .modal-input {
