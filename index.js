@@ -86,33 +86,3 @@ function renderModal() {
             <h2 id="paid-msg">Thanks! Your order is on its way!</h2>`
     })
 }
-
-
-// document.getElementById("pay-btn").addEventListener("click", function () {
-//     document.getElementById("pay-form").addEventListener("submit", function(e){
-//         e.preventDefault()
-//     })
-//     modal.style.display = 'none'
-//     orderSummary.innerHTML = `<h2 id="paid-msg">Thanks! Your order is on its way!</h2>`
-// })
-
-// document.getElementById("order-btn").addEventListener("click", function () {
-//     modalInner.innerHTML = `
-//             <button id="close-btn">X</button>
-//             <h1>Enter card details</h1>
-//             <form>
-//                 <input type="text" name="name" id="name" class="modal-input" placeholder="Enter your name" required/>
-//                 <input type="text" name="card" id="card" class="modal-input" placeholder="Enter card number" required/>
-//                 <input type="text" name="cvv" id="cvv" class="modal-input" placeholder="Enter CVV" required/>
-//             </form>
-//             <button id="pay-btn">Pay</button>
-//     `
-//     modal.style.display = 'flex'
-//     document.getElementById("close-btn").addEventListener("click", function () {
-//         modal.style.display = 'none'
-//     })
-//     document.getElementById("pay-btn").addEventListener("click", function () {
-//         modal.style.display = 'none'
-//         orderSummary.innerHTML = `<h2 id="paid-msg">Thanks! Your order is on its way!</h2>`
-//     })
-// })

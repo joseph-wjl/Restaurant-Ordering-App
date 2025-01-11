@@ -38,7 +38,6 @@ body {
     justify-content: space-between;
     border-bottom: grey 1px solid;
     padding-bottom: 40px;
-    /* border: 1px black solid; */
 }
 
 .food-all-info {
@@ -50,7 +49,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-    /* border: 1px black solid; */
     width: 60%;
 }
 
@@ -66,7 +64,6 @@ body {
     border: none;
     background-color: white;
     font-size: 20px;
-    /* padding: 10px; */
 }
 
 .add-btn:hover {
