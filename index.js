@@ -79,7 +79,7 @@ function renderModal() {
     document.getElementById("close-btn").addEventListener("click", function () {
         modal.style.display = 'none'
     })
-    document.getElementById("pay-btn").addEventListener("click", function (e) {
+    document.getElementById("pay-form").addEventListener("submit", function (e) {
         e.preventDefault()
         modal.style.display = 'none'
         orderSummary.innerHTML = `
